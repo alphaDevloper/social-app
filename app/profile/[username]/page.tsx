@@ -22,12 +22,9 @@ export async function generateMetadata({
   };
 }
 
-async function ProfilePageServer({
-  params,
-}: {
-  params: Promise<{ username: string }>;
-}) {
-  const { username } = await params;
+async function ProfilePageServer({ params }: { params: { username: string } }) {
+  const { username } = params;
+
   const user = await getProfileByUsername(username);
 
   if (!user) notFound();
