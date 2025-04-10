@@ -18,8 +18,8 @@ function ImageUpload({ endpoint, onChange, value }: ImageUploadProps) {
         <Image
           src={value}
           alt="Upload"
-          width={20}
-          height={20}
+          width={50}
+          height={50}
           className="rounded-md size-40 object-cover"
         />
         <button
